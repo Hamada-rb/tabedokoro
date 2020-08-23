@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "../../stylesheets/application.sass"
+import "../src/navbar_burger"
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
