@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= @restaurant.name %>
+<%= @restaurant.address %>
+<%= @restaurant.tel %>
+<%= @restaurant.content %>
+<%= @restaurant.lat %>
+<%= @restaurant.lng %>
+
 <%= link_to 'Edit', edit_dashboard_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', dashboard_restaurants_path %>
