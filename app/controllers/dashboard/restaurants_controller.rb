@@ -1,4 +1,4 @@
-class Dashboard::RestaurantsController < ApplicationController
+class Dashboard::RestaurantsController < Dashboard::ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   # GET /restaurants
