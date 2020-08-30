@@ -28,7 +28,7 @@ class Dashboard::RestaurantsController < Dashboard::ApplicationController
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+        format.html { redirect_to dashboard_restaurants_url(@restaurant), notice: 'Restaurant was successfully created.' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Dashboard::RestaurantsController < Dashboard::ApplicationController
   def update
     respond_to do |format|
       if @restaurant.update(restaurant_params)
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
+        format.html { redirect_to dashboard_restaurants_url(@restaurant), notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class Dashboard::RestaurantsController < Dashboard::ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.fetch(:restaurant, {})
+      params.fetch(:restaurant, {}).permit(:name, :address, :tel, :content, :lat, :lng)
     end
 end
