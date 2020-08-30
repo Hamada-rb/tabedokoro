@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # ユーザーのルーティング
   root 'web#index'
   get '/about', to: 'web#about'
