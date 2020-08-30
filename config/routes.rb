@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+    get 'top/index'
+  end
   root 'web#index'
   get '/about', to: 'web#about'
   get '/contact', to: 'web#contact'
