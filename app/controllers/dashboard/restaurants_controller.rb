@@ -42,7 +42,7 @@ class Dashboard::RestaurantsController < Dashboard::ApplicationController
   def update
     respond_to do |format|
       if @restaurant.update(restaurant_params)
-        format.html { redirect_to dashboard_restaurants_url(@restaurant), notice: 'Restaurant was successfully updated.' }
+        format.html { redirect_to dashboard_restaurant_url(@restaurant), notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
       else
         format.html { render :edit }
