@@ -1,39 +1,38 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Restaurants</h1>
-
 <div class="container">
-    <div class="columns mx-0">
-        <% @restaurants.each do |restaurant| %>
-            <div class="column">
-                <%= link_to dashboard_restaurant_path(restaurant) do %>
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4"><%= restaurant.name %></p>
-                                </div>
-                            </div>
+  <p id="notice"><%= notice %></p>
 
-                            <div class="content">
-                                <%= restaurant.content %>
-                            </div>
-                        </div>
-                    </div>
-                <% end %>
-            </div>
-        <% end %>
-    </div>
+  <span class="is-size-1">食事処管理</span>
+  <div class="columns mx-0">
+      <% @restaurants.each do |restaurant| %>
+          <div class="column">
+              <%= link_to dashboard_restaurant_path(restaurant) do %>
+                  <div class="card">
+                      <div class="card-image">
+                          <figure class="image is-4by3">
+                              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                          </figure>
+                      </div>
+                      <div class="card-content">
+                          <div class="media">
+                              <div class="media-left">
+                                  <figure class="image is-48x48">
+                                      <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                  </figure>
+                              </div>
+                              <div class="media-content">
+                                  <p class="title is-4"><%= restaurant.name %></p>
+                              </div>
+                          </div>
+
+                          <div class="content">
+                              <%= restaurant.content %>
+                          </div>
+                      </div>
+                  </div>
+              <% end %>
+          </div>
+      <% end %>
+  </div>
+
+  <%= link_to 'New Restaurant', new_dashboard_restaurant_path, class: "button is-primary mt-3" %>
 </div>
-
-<%= link_to 'New Restaurant', new_dashboard_restaurant_path %>
