@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :dashboard do
     root 'top#index'
+    resources :restaurants
   end
   root 'web#index'
   get '/about', to: 'web#about'
