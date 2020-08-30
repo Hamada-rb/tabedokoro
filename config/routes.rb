@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # 初期リリースはユーザーアカウントを使わないためコメントアウト
+  # devise_for :users
   devise_for :admins
   # ユーザーのルーティング
   root 'web#index'
