@@ -12,36 +12,48 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: "label" %>
+    <div class="control">
+      <%= form.text_field :name, class: "input", placeholder: "店名を入力してください" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.label :address, class: "label"  %>
+    <div class="control">
+      <%= form.text_field :address, class: "input", placeholder: "住所を入力してください" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :tel %>
-    <%= form.text_field :tel %>
+    <%= form.label :tel, class: "label"  %>
+    <div class="control">
+      <%= form.text_field :tel, class: "input", placeholder: "電話番号を入力してください" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.label :content, class: "label"  %>
+    <div class="control">
+      <%= form.text_area :content, class: "textarea", placeholder: "メニューなどを入力してください" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :lat %>
-    <%= form.text_field :lat %>
+    <%= form.label :lat, class: "label"  %>
+    <div class="control">
+      <%= form.text_field :lat, class: "input", placeholder: "緯度を入力してください" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :lng %>
-    <%= form.text_field :lng %>
+    <%= form.label :lng, class: "label"  %>
+    <div class="control">
+      <%= form.text_field :lng, class: "input", placeholder: "経度を入力してください" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "button is-primary" %>
   </div>
 <% end %>
